@@ -1,0 +1,32 @@
+server:
+  port: 8888
+
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+      url: jdbc:mysql://127.0.0.1:3306/springboot?serverTimezone=UTC
+      username: springboot
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      #       下面为连接池设置，应用到上面的数据源中（一些最基本的设置）
+      #初始大小
+      initialSize: 5
+      #最小
+      minIdle: 5
+      #最大
+      maxActive: 20
+      #获取连接等待超时时间
+      maxWait: 60000
+
+
+  #redis相关配置
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器地址
+    host: 127.0.0.1
+    # Redis服务器连接端口
+    port: 6379
+  #     Redis服务器连接密码（默认为空）
+  #    password: 123456
